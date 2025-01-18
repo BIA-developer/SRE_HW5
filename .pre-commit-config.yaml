@@ -1,0 +1,19 @@
+default_stages: [ pre-commit ]
+repos:
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.97.0 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_docs
+      - id: terraform_validate
+      - id: terraform_tflint
+      - id: terraform_trivy
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        description: 'Удаляет пробелы в конце строк'
+      - id: end-of-file-fixer
+        description: 'Добавляет пустую строку в конец файла'
+      - id: check-yaml
+        description: 'Проверяет синтаксис YAML файлов'
