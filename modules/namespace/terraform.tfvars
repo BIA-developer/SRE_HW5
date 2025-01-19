@@ -1,1 +1,1 @@
-flask_app_namespace = "flask-application-namespace"
+new_namespace = "flask-application-namespace"

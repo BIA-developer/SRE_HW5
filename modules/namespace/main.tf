@@ -8,7 +8,7 @@ terraform {
   }
 }
 
-resource "kubernetes_namespace" "flask_app_namespace" {
+resource "kubernetes_namespace" "new_namespace" {
   metadata {
     annotations = {
       name = "flask_app_namespace_annotation"
@@ -18,6 +18,6 @@ resource "kubernetes_namespace" "flask_app_namespace" {
       app_label = "flask"
     }
 
-    name = var.flask_app_namespace
+    name = var.new_namespace
   }
 }
